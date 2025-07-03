@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  command = "mkdir -p public && cp -r app/templates/* public/ && cp app/static/* public/ 2>/dev/null || true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

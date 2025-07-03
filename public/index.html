@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myflaskapplol - Production Flask App Demo</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .card { box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: none; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .hero-section { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
+        .demo-button { margin: 0.5rem; }
+        .github-link { color: #fff; text-decoration: none; }
+        .github-link:hover { color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-5">
+        <!-- Hero Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="hero-section rounded-4 p-5 text-center text-white">
+                    <h1 class="display-4 fw-bold text-white mb-3">
+                        <i class="fas fa-rocket me-3"></i>myflaskapplol
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Production Flask app with Docker, monitoring, backups, and CI/CD
+                    </p>
+                    <div class="mb-4">
+                        <a href="https://github.com/Samirrahman71/myflaskapplol" class="btn btn-outline-light btn-lg me-3 github-link">
+                            <i class="fab fa-github me-2"></i>View Source Code
+                        </a>
+                        <span class="badge bg-success fs-6 me-2">
+                            <i class="fas fa-check-circle me-1"></i>Production Ready
+                        </span>
+                        <span class="badge bg-info fs-6">
+                            <i class="fas fa-docker me-1"></i>Containerized
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon text-primary">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h5 class="card-title">Docker Containers</h5>
+                    <p class="card-text text-muted">Multi-stage builds with security hardening and non-root execution</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon text-warning">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="card-title">Prometheus Monitoring</h5>
+                    <p class="card-text text-muted">Real-time metrics collection with custom Flask monitoring</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon text-success">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="card-title">Security Scanning</h5>
+                    <p class="card-text text-muted">Trivy vulnerability scanning integrated in CI/CD pipeline</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon text-danger">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h5 class="card-title">Automated Backups</h5>
+                    <p class="card-text text-muted">Scheduled backups with rotation and metadata tracking</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="mb-0"><i class="fas fa-terminal me-2"></i>Quick Start</h3>
+                    </div>
+                    <div class="card-body bg-dark text-light">
+                        <pre class="mb-0"><code># Clone and run locally
+git clone https://github.com/Samirrahman71/myflaskapplol.git
+cd myflaskapplol
+docker compose up
+
+# Open in browser: http://localhost:8000</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Demo Note -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card border-warning">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-warning">
+                            <i class="fas fa-rocket me-2"></i>Want to See it Live?
+                        </h4>
+                        <p class="card-text">
+                            This is a static preview. The full interactive demo with real-time metrics, 
+                            monitoring, and API endpoints is available when you run it locally with Docker.
+                        </p>
+                        <a href="https://github.com/Samirrahman71/myflaskapplol" class="btn btn-warning">
+                            <i class="fab fa-github me-2"></i>Get the Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0"><i class="fas fa-sitemap me-2"></i>Architecture</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-3">
+                                <div class="p-3 bg-light rounded">
+                                    <i class="fas fa-server fa-2x text-primary mb-2"></i>
+                                    <h5>Flask App</h5>
+                                    <small class="text-muted">Gunicorn WSGI Server</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="p-3 bg-light rounded">
+                                    <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
+                                    <h5>Prometheus</h5>
+                                    <small class="text-muted">Metrics & Monitoring</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="p-3 bg-light rounded">
+                                    <i class="fas fa-cogs fa-2x text-success mb-2"></i>
+                                    <h5>CI/CD Pipeline</h5>
+                                    <small class="text-muted">GitHub Actions</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-3"><i class="fas fa-user me-2"></i>Why I Built This</h3>
+                        <p class="text-muted mb-3">
+                            I wanted to show more than just code samples. This demonstrates how I think about production applications:
+                            proper monitoring, automated backups, security scanning, and a user-friendly interface.
+                        </p>
+                        <p class="text-muted mb-0">
+                            Everything runs locally with Docker, but it's designed to deploy anywhere. 
+                            Perfect for demonstrating real-world development skills to hiring managers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
