@@ -8,6 +8,8 @@
 
 > A real Flask app with Docker, monitoring, backups, and CI/CD. Built to show production-ready development practices.
 
+🌟 **[LIVE DEMO](https://flaskappforcicd.netlify.app/)** | 💻 **[Run Locally](#quick-start)**
+
 ## What This Is
 
 I built this to demonstrate how I approach production applications. It's a Flask web app that includes everything you'd need for a real deployment:
