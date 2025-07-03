@@ -37,16 +37,18 @@ That's it. The app will start, Prometheus will begin monitoring, and you can see
 
 ## What You'll See
 
-### Web Interface (http://localhost:8000)
-- Real-time system status and uptime
-- Interactive buttons to test different components
-- Live metrics that update every 5 seconds
-- Clear explanations of what each part does
+### Live Demo Features
+- Professional web interface showcasing the project
+- Architecture overview with clean design
+- Technical stack explanation
+- Quick start guide for developers
+- Personal story about why I built this
 
-### Monitoring Dashboard (http://localhost:9090)
-- Prometheus metrics collection
-- Request rates, response times
-- System health indicators
+### When Running Locally
+- Real-time system monitoring and metrics
+- Interactive Flask application
+- Prometheus dashboard with live data
+- Automated backup system in action
 
 ## The Stack
 
