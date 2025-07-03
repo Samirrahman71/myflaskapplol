@@ -138,6 +138,9 @@ cython_debug/
 
 # Prometheus data
 prometheus/data/
+prometheus-*/
+*.tar.gz
+prometheus_data/
 
 # Backup files
 backup/*.json
