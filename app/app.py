@@ -105,6 +105,14 @@ def metrics():
     logger.info("Metrics endpoint accessed")
     return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
 
+@app.route('/robots.txt')
+def robots():
+    return Response('User-agent: *\nAllow: /', mimetype='text/plain')
+
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.svg')
+
 @app.route('/api/data')
 @track_metrics
 def get_data():
@@ -153,4 +161,25 @@ if __name__ == '__main__':
     logger.info(f"Starting Flask app on port {port}")
     logger.info(f"Environment: {os.getenv('ENVIRONMENT', 'development')}")
     
-    app.run(host='0.0.0.0', port=port, debug=debug)
+    @app.errorhandler(404)
+    def not_found_error(error):
+        return jsonify({
+            'error': 'Not found',
+            'message': 'The requested resource was not found.',
+            'available_endpoints': [
+                '/',
+                '/health',
+                '/api/data',
+                '/metrics'
+            ]
+        }), 404
+
+    @app.errorhandler(500)
+    def internal_error(error):
+        return jsonify({
+            'error': 'Internal server error',
+            'message': 'Something went wrong on our end.',
+            'status': 'error'
+        }), 500
+
+    app.run(host='0.0.0.0', port=5000, debug=False)
