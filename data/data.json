@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "created_at": "2024-01-16T14:45:00Z"
+    }
+  ],
+  "metrics": {
+    "total_users": 2,
+    "last_backup": "2024-07-02T20:00:00Z",
+    "system_status": "operational"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "environment": "development",
+    "last_updated": "2024-07-02T20:08:37Z"
+  }
+}
